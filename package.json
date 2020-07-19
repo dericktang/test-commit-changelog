@@ -1,0 +1,37 @@
+{
+    "name": "test-commit-changelog",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dericktang/test-commit-changelog.git"
+    },
+    "keywords": [
+        "test-commit-changelog"
+    ],
+    "author": "dericktang",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/dericktang/test-commit-changelog/issues"
+    },
+    "homepage": "https://github.com/dericktang/test-commit-changelog#readme",
+    "devDependencies": {
+        "conventional-changelog-cli": "^2.0.34",
+        "cz-conventional-changelog": "^3.2.0",
+        "verify-commit": "^1.0.0",
+        "yorkie": "^2.0.0"
+    },
+    "gitHooks": {
+        "commit-msg": "node ./node_modules/verify-commit/index.js"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    }
+}
